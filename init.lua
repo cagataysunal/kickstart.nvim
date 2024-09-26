@@ -6,10 +6,9 @@ vim.g.have_nerd_font = true
 -- [[ Setting options ]]
 
 vim.opt.number = true
-
 vim.opt.mouse = 'a'
-
 vim.opt.showmode = false
+vim.opt.guicursor = ''
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
@@ -63,12 +62,6 @@ vim.keymap.set('n', 'ı', 'i') -- For Turkish keyboards
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
--- Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 --  Use CTRL+<hjkl> to switch between windows
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
